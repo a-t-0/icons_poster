@@ -1,1 +1,2 @@
-Welcome to this presentation with the topic: "Leveraging brain-adaptation principles to increase radiation resistance of neuromorphic space hardware".
+Welcome to this presentation with the topic: Leveraging brain-adaptation principles to increase radiation resistance of neuromorphic space hardware.
+In this 3 minute talk I will explain how I came up with this research, why it is relevant,  what it solves, and how that is done.

@@ -1,0 +1,1 @@
+Welcome to this presentation on the robustness of spiking neural networks. We look into leveraging brain-adaptation principles to increase radiation resistance of neuromorphic space hardware.
