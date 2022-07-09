@@ -75,14 +75,14 @@
 %% values in them; it is your responsibility as an author to replace
 %% the commands and values with those provided to you when you
 %% complete the rights form.
-\setcopyright{acmcopyright}
-\copyrightyear{2022}
-\acmYear{2022}
-\acmDOI{10.5281/zenodo.6509080}
+%\setcopyright{acmcopyright}
+%\copyrightyear{2022}
+%\acmYear{2022}
+%\acmDOI{10.5281/zenodo.6509080}
 
 %% These commands are for a PROCEEDINGS abstract or paper.
-\acmConference[Conference acronym 'ICONS]{International Conference on Neuromorphic Systems}{July 27--29,
-  2022}{Knoxville, Tennessee}
+%\acmConference[Conference acronym 'ICONS]{International Conference on Neuromorphic Systems}{July 27--29,
+%  2022}{Knoxville, Tennessee}
 %\acmPrice{15.00}
 %\acmISBN{978-1-4503-XXXX-X/18/06}
 
@@ -137,7 +137,16 @@
 %%
 %% The "title" command has an optional parameter,
 %% allowing the author to define a "short title" to be used in page headers.
-\title{Leveraging brain-adaptation principles to increase radiation resistance of neuromorphic space hardware}
+\title{Leveraging brain-adaptation principles to increase radiation resistance of neuromorphic space hardware
+\includemedia[
+  addresource=audio/output/spoken_text.mp3,
+  transparent,
+  flashvars={
+    source=audio/output/spoken_text.mp3
+   &autoPlay=true
+  },
+]{\includegraphics[height=3em]{audio/speaker.png}}{APlayer.swf}
+}
 
 %%
 %% The "author" command and its associated commands are used to define
@@ -146,40 +155,40 @@
 %% "authornote" and "authornotemark" commands
 %% used to denote shared contribution to the research.
 %\author{Akke Toeter}
-\author{A.H.H. Toeter}
+\author{A.H.H. Toeter, J.H.P. Kwisthout, D.M. Stam, D.M. Menicucci}
 %\authornote{All authors contributed equally to this research.}
-\orcid{0000-0002-9577-920X}
-
-\affiliation{%
-  \institution{Delft University of Technology, Radboud University}
-  \country{The Netherlands}
-}
-\email{a.h.h.toeter@tudelft.nl}
-
-\author{J.H.P. Kwisthout}
-\orcid{0000-0003-4383-7786}
-%\authornotemark[1]
-\affiliation{%
-  \institution{Radboud University}
-  \country{The Netherlands}
-}
-\email{johan.kwisthout@donders.ru.nl}
-
-\author{D.M. Stam}
-\orcid{0000-0003-3697-2971}
-\affiliation{%
-  \institution{Delft University of Technology}
-  \country{The Netherlands}
-}
-\email{D.M.Stam@tudelft.nl}
-
-\author{A. Menicucci}
-\orcid{0000-0002-7064-6275}
-\affiliation{%
-  \institution{Delft University of Technology}
-  \country{The Netherlands}
-}
-\email{A.Menicucci@tudelft.nl}
+%\orcid{0000-0002-9577-920X}
+%
+%\affiliation{%
+%  \institution{Delft University of Technology, Radboud University}
+%  \country{The Netherlands}
+%}
+%\email{a.h.h.toeter@tudelft.nl}
+%
+%\author{J.H.P. Kwisthout}
+%\orcid{0000-0003-4383-7786}
+%%\authornotemark[1]
+%\affiliation{%
+%  \institution{Radboud University}
+%  \country{The Netherlands}
+%}
+%\email{johan.kwisthout@donders.ru.nl}
+%
+%\author{D.M. Stam}
+%\orcid{0000-0003-3697-2971}
+%\affiliation{%
+%  \institution{Delft University of Technology}
+%  \country{The Netherlands}
+%}
+%\email{D.M.Stam@tudelft.nl}
+%
+%\author{A. Menicucci}
+%\orcid{0000-0002-7064-6275}
+%\affiliation{%
+%  \institution{Delft University of Technology}
+%  \country{The Netherlands}
+%}
+%\email{A.Menicucci@tudelft.nl}
 
 %%
 %% By default, the full list of authors will be used in the page
@@ -257,8 +266,8 @@
 
 % Include chapters.
 %\input{chapters/0_abstract}
-\input{chapters/1_intro}
-\input{chapters/2_brain_adaptation.tex}
+%\input{chapters/1_intro}
+%\input{chapters/2_brain_adaptation.tex}
 \input{chapters/2_methodology.tex}
 \input{chapters/3_results.tex}
 \input{chapters/4_discussion.tex}

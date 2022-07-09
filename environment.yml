@@ -1,47 +1,66 @@
-# run: conda env create --file environment.yml
-# include new packages: conda env update --file environment.yml
+# This file is to automatically configure your environment. It allows you to
+# run the code with a single command without having to install anything
+# (extra).
 
-# For first time usage on Ubuntu:
-# sudo apt upgrade
-# sudo apt full-upgrade
-# yes | sudo apt install gcc
-name: dnc
+# First run: conda env create --file environment.yml
+# If you change this file, run: conda env update --file environment.yml
+
+
+# Conda configuration settings. (Specify which modules/packages are installed.)
+name: icons-poster
 channels:
   - conda-forge
-  - conda
 dependencies:
-- anaconda
-- conda:
+# Specify specific python version.
+  - python=3.8
 # Run python tests.
-  - pytest
+  - pytest-cov
+# Generate plots.
   - matplotlib
-# Support notebooks.
-  - nb_conda
-# Visualise graphs for PlantUML
-  - graphviz
-# Run graph software quickly
+# Run graph software quickly.
   - networkx
-- pip
-- pip:
-# Auto generate docstrings
-  - pyment
-# Auto format networkx graph plots.
-#  - pygraphviz
-# Auto generate docstrings
-  - flake8
+  - pip
+  - pip:
+# Turns relative import paths into absolute import paths.
+    - absolufy-imports
+# Auto format Python code to make it flake8 compliant.
+    - autoflake
+# Scan Python code for security issues.
+    - bandit
+# Code formatting compliance.
+    - black
+# Correct code misspellings.
+    - codespell
+# Verify percentage of code that has at least 1 test.
+    - coverage
+# Auto formats the Python documentation written in the code.
+    - docformatter
+# Auto generate docstrings.
+    - flake8
+# Auto sort the import statements.
+    - isort
+# Auto format Markdown files.
+    - mdformat
+# Auto check static typing.
+    - mypy
 # Auto generate documentation.
-  - pdoc3
-# Code formatting compliance
-  - black
-# Generate diagrams.
-  - plantuml
+    - pdoc3
+# Auto check programming style aspects.
+    - pylint
+# Auto generate docstrings.
+    - pyment
 # Identify and remove dead code.
-  - vulture
-# Get PlantUML .jar file.
-  - requests
+    - vulture
+# Include GitHub pre-commit hook.
+    - pre-commit
+# TODO: identify exact function(and usage).
+# Seems to be an autoformatter like black, but installed using npm instead of pip.
+    - prettier
+# Automatically upgrades Python syntax to the new Python version syntax.
+    - pyupgrade
+# Another static type checker for python like mypy.
+    - pyright
 # Ensure text2speech module is installed.
   - TTS
 # Get natural language processing module to split text into short sentences.
   - nltk
-# Tag files
-  - pytaggit

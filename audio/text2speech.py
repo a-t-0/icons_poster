@@ -5,6 +5,7 @@ to convert the audio files into a .wav file"""
 from os import walk
 
 import os
+from pprint import pprint
 import re
 import subprocess
 from pydub import AudioSegment
@@ -80,6 +81,7 @@ def load_txt_from_file(filename):
     return text
 
 
+
 def split_into_sentences(text):
     # Specify regex values.
     alphabets= "([A-Za-z])"
@@ -88,12 +90,15 @@ def split_into_sentences(text):
     starters = "(Mr|Mrs|Ms|Dr|He\s|She\s|It\s|They\s|Their\s|Our\s|We\s|But\s|However\s|That\s|This\s|Wherever)"
     acronyms = "([A-Z][.][A-Z][.](?:[A-Z][.])?)"
     websites = "[.](com|net|org|io|gov)"
+    digits = "([0-9])"
 
     # Perform conversion.
     text = " " + text + "  "
     text = text.replace("\n"," ")
     text = re.sub(prefixes,"\\1<prd>",text)
     text = re.sub(websites,"<prd>\\1",text)
+    text = re.sub(digits + "[.]" + digits,"\\1<prd>\\2",text)
+    if "..." in text: text = text.replace("...","<prd><prd><prd>")
     if "Ph.D" in text: text = text.replace("Ph.D.","Ph<prd>D<prd>")
     text = re.sub("\s" + alphabets + "[.] "," \\1<prd> ",text)
     text = re.sub(acronyms+" "+starters,"\\1<stop> \\2",text)
@@ -110,6 +115,7 @@ def split_into_sentences(text):
     text = text.replace("?","?<stop>")
     text = text.replace("!","!<stop>")
     text = text.replace("<prd>",".")
+    
     sentences = text.split("<stop>")
     sentences = sentences[:-1]
     sentences = [s.strip() for s in sentences]
@@ -250,8 +256,6 @@ def create_output(extension,output_dir,output_filename,soundbite_extension,sound
 
     # Separate the text into smaller sentences.
     sentences=split_into_sentences(text)
-    sentences=["An algorithm is.","Part of my space."]
-
 
     # TODO: Verify the sentences are short enough.
 
@@ -279,6 +283,9 @@ output_filename="Spoken_text"
 soundbite_extension="wav"
 extension="mp3"
 
-
-for tts_model in get_tts_models()[2:5]:
+sentences=["An algorithm is.","Part of my space."]
+#Best in 2:5
+best_so_far="tts_models/en/ljspeech/tacotron2-DDC_ph"
+tts_models=get_tts_models()
+for tts_model in [best_so_far]:
     create_output(extension,output_dir,output_filename,soundbite_extension,soundbite_filename,tts_model)
