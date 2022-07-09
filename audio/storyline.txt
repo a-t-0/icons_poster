@@ -1,0 +1,53 @@
+Step A: 
+1. Who is in our audience?
+1.1 Fellow students.
+1.2 Neuromorphic researchers.
+1.3 Research institute directors.
+2. WHAT: would they do differently after our talk:
+2.1 Fellow students: 
+2.1.1 Copy approach to problem solving.
+2.1.2 Expand upon presented research.
+2.1.3 Synthesise newly gained knowledge into new research directions.
+Neuromorphic researchers:
+2.2.1 Copy approach to problem solving.
+2.2.2 Expand upon presented research.
+2.2.3 Synthesise newly gained knowledge into new research directions.
+Research institute directors:
+2.3.1 Re-evaluate their research priorities. 
+2.3.2 Re-evaluate their research approach.
+2.3.3 Consider absorbing research results and expanding upon it.
+2.3.4 Consider applying presented technology for in-house usage.
+Note, concluding the priorities and approaches are fine, after re-evaluating
+is an acceptable outcome.
+3. Why: 
+3.1 The presented research takes a creative approach to improving application robustness 
+of neuromorphic applications by combining multiple disciplines. This approach may inspire
+fellow students and or researchers to think out of the box.
+3.2 See 3.1, also, the produces code adheres to high quality standards to make
+expanding on the work as easy as possible.
+3.3 See 3.2, also the presented work may have a relatively broad application in 
+space SNNs, as the adaptation mechanisms are designed modular and generic.
+--------------------
+I want to inspire the neuromorphic research community to integrate hardware and software design for 
+the purpose of optimising SSNs in various applications.
+
+Step 2.
+How will we get people curious/wanting to know more?
+2.OPENING
+A short story on how I came up with the idea.
+2.1 Problem
+Space radiation may damage neuromorphic space hardware
+2.2 Solution
+Brain adaptation has shown to allow people to (partially) recover from neuronal and synaptic damage. 
+This principle of brain adaptation may be taken as an inspiration to design SNNs that are more robust
+to radiation.
+2.3 How
+A distributed graph algorithm is converted into an SNN. An adaptation mechanism is created that is applied
+to this SNN, next radiation is simulated in the form of neuron death. The performance of the exposed SNN
+algorithm is reported with and without adaptation mechanisms.
+2.Closing
+Please check out https://github.com/a-t-0/networkx-to-lava-nc/issues/ where I have build a modular library that:
+0. Simulates networkx graphs that encode SNNs of leaky-integrate-and-fire neurons using a the Lava 0.0.3 framework by Intel as backend, or a custom networkx simulator.
+1. Allows for different types of brain-inspired adaptation mechanisms to be applied to arbitrary/your own SNN algorithms (encoded as networkx graphs).
+2. Allows for different types of radiation effect simulations.
+3. Converts the Minimum Dominating Set Approximation algorithm by Alipour et al. into an SNN.
