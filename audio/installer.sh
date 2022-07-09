@@ -1,15 +1,12 @@
 pip install TTS
-git clone git@github.com:coqui-ai/TTS.git
-cd TTS
+#git clone git@github.com:coqui-ai/TTS.git
+#cd TTS
 #pip install -e .[all,dev,notebooks]  # Select the relevant extras
 mkdir -p "output/path/"
 tts --text "Text for TTS" --out_path output/path/speech.wav
 
-#the_text='"'$(cat text.txt)'"'
-the_text='"'$(cat t1.txt)'"'
-tts --text "$the_text" --out_path output/path/text.wav
-
-# The TTS does not allow for long sentences, so to work around this, you could:
+# The TTS does not allow for long sentences, so to work around this, 
+# you could increase the permitted max_decoder_steps.
 # Source: https://github.com/coqui-ai/TTS/issues/1333
 
 # Open the configuration of the default model, 
@@ -25,3 +22,8 @@ tts --text "$the_text" --out_path output/path/text.wav
 #    // Custom limit made larger
 #    "max_decoder_steps": 5000
 #}
+
+the_text='"'$(cat text.txt)'"'
+tts --text "$the_text" --out_path output/path/text.wav
+
+
