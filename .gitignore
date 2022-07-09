@@ -1,3 +1,6 @@
+# Ignore audio output
+audio/output/soundbite_*
+
 # Ignore PlantUML .jar file.
 src/export_data/plantuml.jar
 latex/Images/graphs/*

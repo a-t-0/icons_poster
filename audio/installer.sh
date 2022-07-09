@@ -25,5 +25,3 @@ tts --text "Text for TTS" --out_path output/path/speech.wav
 
 the_text='"'$(cat text.txt)'"'
 tts --text "$the_text" --out_path output/path/text.wav
-
-

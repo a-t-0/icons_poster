@@ -43,4 +43,3 @@ dependencies:
   - TTS
 # Get natural language processing module to split text into short sentences.
   - nltk
-  - punkt

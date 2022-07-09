@@ -1,2 +1,8 @@
-Welcome to this presentation with the topic: Leveraging brain-adaptation principles to increase radiation resistance of neuromorphic space hardware.
-In this 3 minute talk I will explain how I came up with this research, why it is relevant,  what it solves, and how that is done.
+Welcome to this presentation on the robustness of spiking neural networks. We will look into leveraging brain-adaptation principles to increase radiation resistance of neuromorphic space hardware. I will explain how I came up with this research, why it is relevant,  what it solves, and how that is done. 
+
+During neuro-science lectures at Leiden University, I learned how brain adaptation can sometimes allow people to partially recover from brain lesions.
+As part of my space exploration education, I learned how radiation can damage space hardware and result in faulty operating conditions. And in the cognitive computing specialisation I learned how spiking neural networks can be used to perform energy efficient computations. Putting these three insights together, I wondered if brain adaptation principles could be applied in spiking neural networks to increase the radiation robustness of neuromorphic space hardware.
+
+Spacecrafts are typically heavily energy constrained. This makes neuromorphic hardware an interesting candidate for space applications. Accordingly, there is a growing interest in launching neuromorphic hardware into space.
+
+To test the hypothesis, a distributed minimum dominating set approximation algorithm is selected. This algorithm is presented by Alipour. 
