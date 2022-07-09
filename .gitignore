@@ -1,5 +1,5 @@
 # Ignore audio output
-audio/output/soundbite_*
+audio/output/*
 
 # Ignore PlantUML .jar file.
 src/export_data/plantuml.jar
