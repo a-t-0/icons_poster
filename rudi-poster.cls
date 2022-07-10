@@ -211,11 +211,11 @@
 
 % IGNORE
 \setnewlength{\rudisizeblockmethodsresultsbody}{0.26\paperheight}
-% Results
-\setnewlength{\rudisizeblockconclusion}{0.28\paperheight}
+% Results & Discussion
+\setnewlength{\rudisizeblockconclusion}{0.30\paperheight}
 
-% Discussion
-\setnewlength{\rudisizeblockrecommendations}{0.08\paperheight}
+% Conclusion and Recommendations
+\setnewlength{\rudisizeblockrecommendations}{0.05\paperheight}
 
 \setnewlength{\rudisizeblockresults}{0.50\paperheight}
 
