@@ -199,7 +199,7 @@
 
 % Custom 
 \setnewlength{\rudisizeblockmethodsresultsbody}{0.26\paperheight}
-\setnewlength{\rudisizeblockconclusion}{0.060\paperheight}
+\setnewlength{\rudisizeblockconclusion}{0.12\paperheight}
 
 \setnewlength{\rudisizeblockrecommendations}{0.11\paperheight}
 

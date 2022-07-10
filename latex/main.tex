@@ -50,6 +50,11 @@
 
 % Include audio to turn into poster
 \usepackage{media9}
+
+% Allow to use cmdrule to draw horizontal line in table.
+\usepackage{booktabs}
+\usepackage{multirow}
+
 %%% End customisation
 
 
@@ -184,25 +189,8 @@
 
 % ======================================================================
 
-\begin{rudiblockmethods}
-    Converting to Commercial Open Source Software (COSS) can reposition KLM to a pioneering position in the early 21st century. The availability of the source code published by KLM can increase the integration of KLM in new emerging markets whilst pushing innovation through diversification of the applications of the work created by KLM. For example, (future) electric fleet components of KLM that are undergoing maintenance would be more easily connected with novel energy companies through an open source API to function as energy storage units assisting electricity network load balancing. 
-    Additionally, open source software is required for third parties to be able to know the software is safe [4]. Because the user of propriatary/non-open software is not able to see if the code is safe or not. Furthermore it enables KLM to attract the top tech talent whilst contributing to and connecting with society through software. To assist KLM in the conversion to a COSS business model, specific policy recommendations are included at the bottom of this research brief.
-    % \begin{multicols}{3}
-        
-    %     \lipsum[2] \DTMusedate{eventdate} in \languagename
-        
-	   % \begin{itemize*}[label=]
-    %         \item Pinco Panco,
-    %         \item Panco Pinco.
-    %     \end{itemize*}
-        
-    %     \begin{enumerate*}[label=\textbf{\arabic*} ]
-    %         \item Pinco Panco,
-    %         \item Panco Pinco.
-    %     \end{enumerate*}
-        
-    % \end{multicols}
-\end{rudiblockmethods}
+%\begin{rudiblockmethods}
+%\end{rudiblockmethods}
 
 % ======================================================================
 
@@ -215,44 +203,11 @@
             % Local compilation
             \input{latex/chapters/2_methodology.tex}
         \fi
-
     \end{multicols}
 \end{rudiblockiintroduction}
 
 %%\begin{rudiblockimethodsresultsbody}
 %%    \begin{multicols}{3}
-%%    Instead of competing with each other, open source software could enable cooperation between airlines to facilitate for example the development of logistics platforms to facilitate electric or hydrogen aircrafts. This could be an example, where a collaborative development could lead to an alleviation of CO2 emission burdens on the KLM whilst boosting the aviation industry in its entirety.
-%%    
-%%    In other words, by adopting to an open source business model, KLM can contribute to society and connect with society in synergy. The investments in the development of open source software can be reciprocated by enabling the community to build upon and enhance the software of KLM, yielding new and innovative insights as illustrated in the included figure. Furthermore it boosts related economic activity as well as sustainability. To illustrate this, 
-%%    
-%%    \indent Another potential benefit of COSS is the opportunity for other businesses to add value to your business. For example, open source energy management software could enable new pioneering companies such as the local green energy company Vandebron to integrate the part of the (future) electric fleet of KLM undergoing maintenance, with their electric car network balancing grid. This way aircraft maintenance costs could be reduced by re-purposing assets through open source software. The main takeaway here is that COSS enables enhancement of the KLM assests, markets and innovation by diversifying the applicability of their development efforts through open source.
-%%
-%%    \indent Furthermore, open source software is required to be able to verify the security of the software. Without the ability to verify what is written in the source code, organisations cannot be absolutely certain what the degree of security of the software is. To illustrate how critical this security is becoming in an era where economic state sponsored espionage occurs increasingly more frequently, one only has to look at our neighbours at the other side of the channel where the head of MI5 Jonathan Evans confirmed a UK company lost 800 million pounds in a state sponsored espionage affair. By opening up your source code you are exposing it directly to any potential adversaries makes it easier to find any weaknesses in your code and at the same time, you enable millions of developers world wide to perform security audits to identify weaknesses in your code such that the security leaks can be discovered and patched. 
-%%    
-%%    \indent Illustrating the financial attractiveness of COSS is perhaps best done by looking at the acquisition of open source company Red Hat by IBM for 34 billion dollars. This follows a trend of cutting edge tech companies such as Tesla, Docker, Netflix and Spotify, to transform towards- and expand a position as an open source company. This effect of contributing to the society enhances participation of KLM in the public domain, which can be reciprocated by an attraction of the tech-industry top talent. This is illustrated by the difficulties that the top financial institutes face in attracting the technical top talents whilst competing with Silicon Valley in this market.
-%%    
-%%    \begin{rudifig}{\hsize}{Fig. 1: Open Source Enhancing Ideation}
-%%        %\includegraphics[width=\hsize]{ru_en_1}
-%%        \hspace{-1em}
-%%        \includegraphics[width=700pt]{latex/Images/os0.jpg}
-%%        %\caption{test}\label{fig:open_source}
-%%    \end{rudifig}
-%%    \end{multicols}
-%%% 	base: \the\rudisizebase\par
-%%%     paperheight: \the\paperheight\par
-%%%     paperwidth: \the\paperwidth\par
-%%%     header: \the\rudisizeblockheader\par
-%%%     intro: \the\rudisizeblockintro\par 
-%%%     methods: \the\rudisizeblockmethodsresultsbody\par 
-%%%     results: \the\rudisizeblockresults\par 
-%%%     discussion: \the\rudisizeblockdiscussion\par 
-%%%     margin: \the\rudisizemargin\par 
-%%%     $\int_0^{2\pi}\sin(x)dx=0$
-%%%     $$\int_0^{2\pi}\cos(x)dx=0$$
-%%    
-%%    % subsection in main
-%%    \begin{rudisubblock}{\hsize}{Increasing Asset Evaluation Accuracy}
-%%    	Currently KLM uses the straight line method for the amortisation of software to keep track of the devaluation of the value of the software products they have produced over time [2]. When switching to COSS, a larger fraction of the KLM assets will consist of software, hence to be able to maintain an accurate asset value analyis, the straight line method can be replaced by a dedicated software valuation model for software as provided by M. Ben-Menachem and I. Gavious[1].
 %%    \end{rudisubblock}
 %%\end{rudiblockimethodsresultsbody}
 
@@ -260,16 +215,13 @@
 
 \begin{rudiblockconclusion}
     \begin{multicols}{3}
-        %KLM could turn this crisis into an opportunity to nimbly redirect its workforce towards an open source business model. The KLM Transformation Team can facilitate this transition to truly enhance its Customer Experience, Inflight Service, Information Services, Human Resources \& Industrial Relations and Corporate Center Teams. 
-        The KLM Transformation Team can turn the challenging conditions into an opportunity by transitioning to a COSS business model.
-        
-        KLM can amplify its integrated position in the transport industry with the adoption of a company-wide COSS business model and enable other companies to diversify and extend the KLM software. This can lead to new innovative solutions by fresh eyes looking at the same challenges that KLM currently faces.
-        
-        While COSS allows adversaries to read source code, it also enables millions of developers access which ensures bugs and security risks can be identified and solved quicker than with closed source development[4]. COSS is the only way for third parties to know the code is safe as they cannot verify the security of proprietary software[4].
-        
-        Furthermore, a transformation to a COSS business model enables KLM to attract top tech talent.
-        
-        
+        \ifx\homepath\overleafhome
+            % Overleaf compilation.
+            \input{chapters/3_results.tex}
+        \else
+            % Local compilation
+            \input{latex/chapters/3_results.tex}
+        \fi
     \end{multicols}
 \end{rudiblockconclusion}
 
