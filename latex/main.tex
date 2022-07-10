@@ -55,6 +55,8 @@
 \usepackage{booktabs}
 \usepackage{multirow}
 
+% Compact lists
+%\usepackage{enumitem}
 %%% End customisation
 
 
@@ -75,7 +77,9 @@
 \usepackage{qrcode}  % Generate QR codes in LaTeX
 \usepackage{lipsum}
 
+%\usepackage{enumitem}
 \usepackage{cleveref}
+
 %\usepackage{amssymb}  % Additional symbols from American Mathematical Society
 % ======================================================================
 % : set-up document information  % FIXME
@@ -96,6 +100,8 @@ resistance of neuromorphic space hardware
 %\author{D.M. Stam}
 %\author{A. Menicucci}
 \date{2020-06-18}
+
+
 
 \newcommand{\Contact}{e-mail: \mailto{akke.toeter@radboud.student.nl}}
 \newcommand{\Authors}{
@@ -184,6 +190,20 @@ resistance of neuromorphic space hardware
 % ======================================================================
 %% Document
 \begin{document}
+
+% Compact lists
+\renewcommand{\@listI}{%
+\leftmargin=25pt
+\rightmargin=0pt
+\labelsep=0pt
+\labelwidth=20pt
+\itemindent=0pt
+\listparindent=0pt
+\topsep=0pt plus 2pt minus 4pt
+\partopsep=0pt plus 1pt minus 1pt
+\parsep=0pt plus 1pt
+\itemsep=\parsep}
+
 
 % ======================================================================
 \rudiposterheader{\thetitle}{\Authors}{\Affiliations}

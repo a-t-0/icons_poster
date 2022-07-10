@@ -201,11 +201,11 @@
 % : block sizes
 \setnewlength{\rudisizeblockheader}{1\uum}
 % Abstract
-\setnewlength{\rudisizeblockintro}{0.05\paperheight}
+\setnewlength{\rudisizeblockintro}{0.06\paperheight}
 % Ignore
 \setnewlength{\rudisizeblockmethods}{0.01\paperheight} % min
 % Methodology
-\setnewlength{\rudisizeblockintroduction}{0.42\paperheight}% min
+\setnewlength{\rudisizeblockintroduction}{0.37\paperheight}% min
 % Ignore
 \setnewlength{\rudisizeblockdiscussion}{0.08\paperheight}
 
