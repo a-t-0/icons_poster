@@ -306,16 +306,16 @@
 %    - rudiblockresults
 %    - rudiblockdiscussion
 %    - rudiblockaddendum
-\newenvironment{rudiblockintro}{\begin{rudiblock}{rudi-block1-border}{rudi-block1-background}{\hsize}{\rudisizeblockintro}{Target Audience}}{\end{rudiblock}}
+\newenvironment{rudiblockintro}{\begin{rudiblock}{rudi-block1-border}{rudi-block1-background}{\hsize}{\rudisizeblockintro}{Abstract}}{\end{rudiblock}}
 
-\newenvironment{rudiblock_target_audience}{\begin{rudiblock}{rudi-block1-border}{rudi-block1-background}{\hsize}{\rudisizeblockintro}{Target Audience}}{\end{rudiblock}}
+\newenvironment{rudiblock_target_audience}{\begin{rudiblock}{rudi-block1-border}{rudi-block1-background}{\hsize}{\rudisizeblockintro}{Abstract}}{\end{rudiblock}}
 \newenvironment{rudiblocki_executive_summary}{\begin{rudiblock}{rudi-block1-border}{rudi-block1-background}{\hsize}{\rudisizeblockintro}{Executive Summary}}{\end{rudiblock}}
 
-\newenvironment{rudiblockiintroduction}{\begin{rudiblock}{rudi-block1-border}{rudi-block1-background}{\hsize}{\rudisizeblockintroduction}{Introduction}}{\end{rudiblock}}
+\newenvironment{rudiblockiintroduction}{\begin{rudiblock}{rudi-block1-border}{rudi-block1-background}{\hsize}{\rudisizeblockintroduction}{Methodology}}{\end{rudiblock}}
 
 \newenvironment{rudiblockimethodsresultsbody}{\begin{rudiblock}{rudi-block1-border}{rudi-block1-background}{\hsize}{\rudisizeblockmethodsresultsbody}{Open Source With KLM: How and Why}}{\end{rudiblock}}
 
-\newenvironment{rudiblockiconclusion}{\begin{rudiblock}{rudi-block1-border}{rudi-block1-background}{\hsize}{\rudisizeblockconclusion}{Conclusion}}{\end{rudiblock}}
+\newenvironment{rudiblockiconclusion}{\begin{rudiblock}{rudi-block1-border}{rudi-block1-background}{\hsize}{\rudisizeblockconclusion}{Results}}{\end{rudiblock}}
 
 \newenvironment{rudiblockipolicyrecommendations}{\begin{rudiblock}{rudi-block1-border}{rudi-block1-background}{\hsize}{\rudisizeblockrecommendations}{Policy Recommendations}}{\end{rudiblock}}
 
@@ -329,7 +329,7 @@
 
 
 
-\newenvironment{rudiblockconclusion}{\begin{rudiblock}{rudi-block3-border}{rudi-block3-background}{\hsize}{\rudisizeblockconclusion}{Conclusion}}{\end{rudiblock}}
+\newenvironment{rudiblockconclusion}{\begin{rudiblock}{rudi-block3-border}{rudi-block3-background}{\hsize}{\rudisizeblockconclusion}{Results}}{\end{rudiblock}}
 
 \newenvironment{rudiblock_references_and_acknowledgements}{\begin{rudiblock}{rudi-block3-border}{rudi-block3-background}{\hsize}{\rudisizeblockreferences}{References \& Acknowledgements}}{\end{rudiblock}}
 
