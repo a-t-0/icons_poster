@@ -79,16 +79,36 @@
 %\usepackage{amssymb}  % Additional symbols from American Mathematical Society
 % ======================================================================
 % : set-up document information  % FIXME
-\title{Open Source Journeys With KLM}
+\title{Leveraging brain-adaptation principles to increase radiation\\
+resistance of neuromorphic space hardware
+\includemedia[
+  addresource=audio/output/spoken_text.mp3,
+  transparent,
+  flashvars={
+    source=audio/output/spoken_text.mp3
+   &autoPlay=true
+  },
+]{\includegraphics[height=0.8em]{audio/speaker.png}}{APlayer.swf}}
 % \title{RU-DI Poster Template RU-DI Poster Template RU-DI Poster Template RU-DI Poster Template RU-DI Poster Template RU-DI Poster Template}  % STRESS-TEST
+%\author{Akke Toeter, J.H.P. Kwisthout, D.M. Stam, A. Menicucci}
 \author{Akke Toeter}
+%\author{J.H.P. Kwisthout}
+%\author{D.M. Stam}
+%\author{A. Menicucci}
 \date{2020-06-18}
 
 \newcommand{\Contact}{e-mail: \mailto{akke.toeter@radboud.student.nl}}
 \newcommand{\Authors}{
 	\hspace{-1ex}
     \begin{itemize*}[label=]
-    	\item \theauthor\textsuperscript{1} %,
+        %\item Custom text
+    	\item \theauthor\textsuperscript{1,2} %,
+        \item J.H.P. Kwisthout\textsuperscript{1} %,
+        \item D.M.Stam\textsuperscript{2} %,
+        \item A. Menicucci\textsuperscript{2} %,
+        %\item \theauthor\textsuperscript{1} %,
+        %\item \theauthor\textsuperscript{2} %,
+        %\item \theauthor\textsuperscript{2} %,
 % 	    \item \theauthor\textsuperscript{1}  % STRESS-TEST
 % 	    \item \theauthor\textsuperscript{1}  % STRESS-TEST
 % 	    \item \theauthor\textsuperscript{1}  % STRESS-TEST
@@ -98,6 +118,7 @@
 %   \hspace{0.1ex}
   \begin{enumerate*}[label=\textbf{\arabic*} ]
     \item \RUDI, Nijmegen, Netherlands
+    \item \DELFT, Delft, Netherlands
 %     \item \RUDI  % STRESS-TEST
 %     \item \RUDI  % STRESS-TEST
 %     \item \RUDI  % STRESS-TEST
@@ -170,11 +191,12 @@
 \rudiposterfooter{\Contact}{\ExtraLogos}
 
 % ======================================================================
-
+\vspace{-2.4em}
 \begin{rudiblockintro}
     \begin{multicols}{3}
         %% The abstract is a short summary of the work to be presented in the
 %% article.
+        
         \ifx\homepath\overleafhome
             % Overleaf compilation.
             \input{chapters/0_abstract}

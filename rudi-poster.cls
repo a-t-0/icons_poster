@@ -81,6 +81,7 @@
 
 % : Institute full name
 \newcommand{\RUDI}{Radboud University}
+\newcommand{\DELFT}{Delft University}
 \newcommand{\RUDISHORT}{Radboud University, Nijmegen (NL)}
 \newcommand{\RUDIFULL}{Radboud University, Nijmegen, Netherlands}
 
@@ -149,7 +150,7 @@
 % : poster specific text sizes
 % note: 1mm = 2.8452755845248108pt and 1pt = 0.35145980425899936mm
 \setnewlength{\rudisizetext}{9\uum}  % ~ 28.5pt
-\setnewlength{\rudisizetitle}{2.4\rudisizetext}
+\setnewlength{\rudisizetitle}{2\rudisizetext} % Size of title 
 \setnewlength{\rudisizeauthors}{\rudisizetext}
 \setnewlength{\rudisizeaffiliations}{0.9\rudisizetext}
 
@@ -178,16 +179,23 @@
 \setnewlength{\rudisizeborder}{2\uum}
 \setnewlength{\rudisizehpadding}{10\uum}
 \setnewlength{\rudisizevpadding}{5\uum}
+
 \setnewlength{\rudisizemargin}{10\uum}
+
 \setnewlength{\rudisizetopmargin}{1.2\rudisizemargin}
 \setnewlength{\rudisizebottommargin}{45\uum}
+
 \setnewlength{\rudisizeleftmargin}{50\uum}
 \setnewlength{\rudisizerightmargin}{20\uum}
-\setnewlength{\rudisizeblocktitleheight}{10\uum}
-\setnewlength{\rudisizeblocktitlewidth}{100\uum}
+
+\setnewlength{\rudisizeblocktitleheight}{20\uum} % Block title height
+\setnewlength{\rudisizeblocktitlewidth}{60\uum}
 \setnewlength{\rudisizelogooffset}{2\uum}
+
+% The figure caption height and width(Orange blocks with Fig. 1 in them)
 \setnewlength{\rudisizefigtitleheight}{10\uum}
 \setnewlength{\rudisizefigtitlewidth}{12\uum}
+
 \setnewlength{\rudisizeextralogo}{\rudisizebottommargin - \rudisizemargin}
 
 % : block sizes
@@ -321,9 +329,9 @@
 
 \newenvironment{rudiblockimethodsresultsbody}{\begin{rudiblock}{rudi-block1-border}{rudi-block1-background}{\hsize}{\rudisizeblockmethodsresultsbody}{Open Source With KLM: How and Why}}{\end{rudiblock}}
 
-\newenvironment{rudiblockiconclusion}{\begin{rudiblock}{rudi-block1-border}{rudi-block1-background}{\hsize}{\rudisizeblockconclusion}{Results}}{\end{rudiblock}}
+\newenvironment{rudiblockiconclusion}{\begin{rudiblock}{rudi-block1-border}{rudi-block1-background}{\hsize}{\rudisizeblockconclusion}{Results \& Discussion}}{\end{rudiblock}}
 
-\newenvironment{rudiblockipolicyrecommendations}{\begin{rudiblock}{rudi-block1-border}{rudi-block1-background}{\hsize}{\rudisizeblockrecommendations}{Discussion}}{\end{rudiblock}}
+\newenvironment{rudiblockipolicyrecommendations}{\begin{rudiblock}{rudi-block1-border}{rudi-block1-background}{\hsize}{\rudisizeblockrecommendations}{Conclusion \& Recommendations}}{\end{rudiblock}}
 
 
 \newenvironment{rudiblockmethods}{\begin{rudiblock}{rudi-block1-border}{rudi-block1-background}{\hsize}{\rudisizeblockmethods}{Executive Summary}}{\end{rudiblock}}
@@ -331,11 +339,11 @@
 \newenvironment{rudiblockdesign}{\begin{rudiblock}{rudi-block1-border}{rudi-block1-background}{\hsize}{\rudisizeblockmethods}{Design}}{\end{rudiblock}}
 \newenvironment{rudiblockanalysis}{\begin{rudiblock}{rudi-block1-border}{rudi-block1-background}{\hsize}{\rudisizeblockmethods}{Analysis}}{\end{rudiblock}}
 
-\newenvironment{rudiblockresults}{\begin{rudiblock}{rudi-block2-border}{rudi-block2-background}{\hsize}{\rudisizeblockresults}{Results}}{\end{rudiblock}}
+\newenvironment{rudiblockresults}{\begin{rudiblock}{rudi-block2-border}{rudi-block2-background}{\hsize}{\rudisizeblockresults}{Results \& Discussion}}{\end{rudiblock}}
 
 
 
-\newenvironment{rudiblockconclusion}{\begin{rudiblock}{rudi-block3-border}{rudi-block3-background}{\hsize}{\rudisizeblockconclusion}{Results}}{\end{rudiblock}}
+\newenvironment{rudiblockconclusion}{\begin{rudiblock}{rudi-block3-border}{rudi-block3-background}{\hsize}{\rudisizeblockconclusion}{Results \& Discussion}}{\end{rudiblock}}
 
 \newenvironment{rudiblock_references_and_acknowledgements}{\begin{rudiblock}{rudi-block3-border}{rudi-block3-background}{\hsize}{\rudisizeblockreferences}{References \& Acknowledgements}}{\end{rudiblock}}
 
