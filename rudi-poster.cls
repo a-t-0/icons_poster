@@ -317,7 +317,7 @@
 
 \newenvironment{rudiblockiconclusion}{\begin{rudiblock}{rudi-block1-border}{rudi-block1-background}{\hsize}{\rudisizeblockconclusion}{Results}}{\end{rudiblock}}
 
-\newenvironment{rudiblockipolicyrecommendations}{\begin{rudiblock}{rudi-block1-border}{rudi-block1-background}{\hsize}{\rudisizeblockrecommendations}{Policy Recommendations}}{\end{rudiblock}}
+\newenvironment{rudiblockipolicyrecommendations}{\begin{rudiblock}{rudi-block1-border}{rudi-block1-background}{\hsize}{\rudisizeblockrecommendations}{Discussion}}{\end{rudiblock}}
 
 
 \newenvironment{rudiblockmethods}{\begin{rudiblock}{rudi-block1-border}{rudi-block1-background}{\hsize}{\rudisizeblockmethods}{Executive Summary}}{\end{rudiblock}}

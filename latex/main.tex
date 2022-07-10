@@ -214,7 +214,7 @@
 % ======================================================================
 
 \begin{rudiblockconclusion}
-    \begin{multicols}{3}
+    \begin{multicols}{2}
         \ifx\homepath\overleafhome
             % Overleaf compilation.
             \input{chapters/3_results.tex}
@@ -230,13 +230,13 @@
 \begin{paralleltwoblocks}{0.67}
     \begin{rudiblockipolicyrecommendations}
         \begin{multicols}{2}
-            To facilitate a smooth transformation towards a COSS business model the following policy recommendations are included:
-            \begin{itemize}
-                \item Apply the temporary reduction of workforce size to nimbly convert KLM towards an COSS business model, incorporate the COSS business model in the hiring strategy when KLM is able to expand again and hire an additional cyber security-, data analytics- and legal team to ensure a safe transition from proprietary codebase to open source codebase.
-                \item Design the COSS to set up open application programmable interfaces (APIs) in cooperation with the open source community to enable companies and community to interact with KLM through the APIs.
-                \item Convert the annual amortisation method of software assets in KLM from the straight line method to the dedicated software valuation model for software as provided by M. Ben-Menachem and I. Gavious [1].
-            \end{itemize}
-            These three steps enable KLM to pivot to a COSS business model to successfully navigate the challenges of the early 21st century and reaffirm its pioneering position.
+            \ifx\homepath\overleafhome
+            % Overleaf compilation.
+            \input{chapters/4_discussion.tex}
+        \else
+            % Local compilation
+            \input{latex/chapters/4_discussion.tex}
+        \fi
         \end{multicols}
     \end{rudiblockipolicyrecommendations}
     &
