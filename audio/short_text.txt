@@ -1,9 +1,4 @@
-Welcome to this presentation on the robustness of spiking neural networks. We will look into leveraging brain-adaptation principles too increase radiation resistance of neuromorphic space hardware. I will explain how I came up with this research. Then we will cover why it is relevant and how the research is performed. 
-
-During neuro-science lectures at Leiden University, I learned how brain adaptation can sometimes allow people to partially recover from brain lesions.
-As part of a space exploration education, I learned how radiation can damage space hardware and result in faulty operating conditions. And in the cognitive computing master, I learned how spiking neural networks can be used to perform energy efficient computations. Putting these three insights together, I wondered if brain adaptation principles could be applied in spiking neural networks too increase the radiation robustness of neuromorphic space hardware.
-
-Space crafts are typically heavily energy constrained. This makes neuromorphic hardware an interesting candidate for space applications. Accordingly, there is a growing interest in launching neuromorphic hardware into space.
+Welcome to this presentation on the robustness of spiking neural networks. We will look into leveraging brain-adaptation principles too increase radiation resistance of neuromorphic space hardware. We will cover why it is relevant and how the research is performed. 
 
 To test the hypothesis, a distributed minimum dominating set approximation algorithm is selected. This algorithm is presented by Ali pour. 
 
@@ -25,6 +20,4 @@ If the algorithm is ran for multiple rounds, the degree receivers of round em ca
 
 The adaptation is implemented in the form of redundancy. For example, for each spike once neuron, a redundant spike once neuron is created. These redundant neurons typically receive the same inputs and outputs as the original neuron. If a redundant neuron does not have an input, it will have a delay of one before it spikes. This allows it to be inhibited by its original neuron. The algorithm is currently not adjusted to accomodate this delay. Therefore, some calculations with the delayed neurons may still be faulty.
 
-The radiation is simulated by using permanent neuron deaths. This neuron death is simulated by setting the spike threshold to one-thousand volts. The modular code also facilitates transient radiation effects, as well as radiation induced neuronal and synaptic property changes. These two options are not tested though.
-
-The experiment was ran on the Lava zero dot zero dot three framework by Intel. For most experiment settings the performance with adaptation was equivalent to the one without adaptation. The adaptation provided a slight advantage for simulations in which twentyfive percent of the neurons died. The scope of the experiment needs to be increased to build more confidence in the results. To this end, a custom network X spiking neural network simulator is built as an alternative backend. This simulator allows for larger graph sizes and eliminates reliability issues.
+For most experiment settings the performance with adaptation was equivalent to the one without adaptation. The adaptation provided a slight advantage for simulations in which twentyfive percent of the neurons died. The scope of the experiment needs to be increased to build more confidence in the results.
