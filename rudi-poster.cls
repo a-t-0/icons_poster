@@ -179,29 +179,35 @@
 \setnewlength{\rudisizehpadding}{10\uum}
 \setnewlength{\rudisizevpadding}{5\uum}
 \setnewlength{\rudisizemargin}{10\uum}
-\setnewlength{\rudisizetopmargin}{1.5\rudisizemargin}
+\setnewlength{\rudisizetopmargin}{1.2\rudisizemargin}
 \setnewlength{\rudisizebottommargin}{45\uum}
 \setnewlength{\rudisizeleftmargin}{50\uum}
 \setnewlength{\rudisizerightmargin}{20\uum}
-\setnewlength{\rudisizeblocktitleheight}{18\uum}
+\setnewlength{\rudisizeblocktitleheight}{10\uum}
 \setnewlength{\rudisizeblocktitlewidth}{100\uum}
 \setnewlength{\rudisizelogooffset}{2\uum}
-\setnewlength{\rudisizefigtitleheight}{12\uum}
+\setnewlength{\rudisizefigtitleheight}{10\uum}
 \setnewlength{\rudisizefigtitlewidth}{12\uum}
 \setnewlength{\rudisizeextralogo}{\rudisizebottommargin - \rudisizemargin}
 
 % : block sizes
-\setnewlength{\rudisizeblockheader}{80\uum}
-\setnewlength{\rudisizeblockintro}{0.06\paperheight}
-\setnewlength{\rudisizeblockmethods}{0.06\paperheight}
-\setnewlength{\rudisizeblockintroduction}{0.45\paperheight}
-\setnewlength{\rudisizeblockdiscussion}{0.11\paperheight}
+\setnewlength{\rudisizeblockheader}{1\uum}
+% Abstract
+\setnewlength{\rudisizeblockintro}{0.05\paperheight}
+% Ignore
+\setnewlength{\rudisizeblockmethods}{0.01\paperheight} % min
+% Methodology
+\setnewlength{\rudisizeblockintroduction}{0.42\paperheight}% min
+% Ignore
+\setnewlength{\rudisizeblockdiscussion}{0.08\paperheight}
 
-% Custom 
+% IGNORE
 \setnewlength{\rudisizeblockmethodsresultsbody}{0.26\paperheight}
-\setnewlength{\rudisizeblockconclusion}{0.12\paperheight}
+% Results
+\setnewlength{\rudisizeblockconclusion}{0.28\paperheight}
 
-\setnewlength{\rudisizeblockrecommendations}{0.11\paperheight}
+% Discussion
+\setnewlength{\rudisizeblockrecommendations}{0.08\paperheight}
 
 \setnewlength{\rudisizeblockresults}{0.50\paperheight}
 

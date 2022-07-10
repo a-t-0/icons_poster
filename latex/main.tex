@@ -214,58 +214,58 @@
 % ======================================================================
 
 \begin{rudiblockconclusion}
-    \begin{multicols}{2}
+    \begin{multicols}{3}
         \ifx\homepath\overleafhome
             % Overleaf compilation.
             \input{chapters/3_results.tex}
+            \input{chapters/4_discussion.tex}
         \else
             % Local compilation
             \input{latex/chapters/3_results.tex}
+            \input{latex/chapters/4_discussion.tex}
         \fi
     \end{multicols}
 \end{rudiblockconclusion}
 
 % ======================================================================
 
-\begin{paralleltwoblocks}{0.67}
-    \begin{rudiblockipolicyrecommendations}
-        \begin{multicols}{2}
-            \ifx\homepath\overleafhome
+\begin{rudiblockipolicyrecommendations}
+    \begin{multicols}{3}
+        \ifx\homepath\overleafhome
             % Overleaf compilation.
-            \input{chapters/4_discussion.tex}
+            \input{chapters/5_conclusion.tex}
+            \input{chapters/6_recommendation.tex}
         \else
             % Local compilation
-            \input{latex/chapters/4_discussion.tex}
+            \input{latex/chapters/5_conclusion.tex}
+            \input{latex/chapters/6_recommendation.tex}
         \fi
-        \end{multicols}
-    \end{rudiblockipolicyrecommendations}
-    &
-    {
-    \begin{rudiblockaddendum}
-    	\small
-    	\References\par
-        \Acknowledgments\par
-        %\Funding
-        % \url{https://www.zdnet.com/article/microsoft-dropped-for-open-source-why-hamburg-is-now-following-munichs-lead/}
-        % \url{https://www.zdnet.com/article/open-source-giant-red-hat-has-a-new-ceo/}
-        % \url{https://opensource.google/docs/why/}
-        % \url{https://www.sciencedirect.com/science/article/abs/pii/S0268401219309867}
-        % \url{https://pubsonline.informs.org/doi/abs/10.1287/deca.2019.0390}
-        % \url{https://dl.acm.org/doi/fullHtml/10.1145/1188913.1188921}
-        % \url{https://ieeexplore.ieee.org/abstract/document/951496}
-        % \url{https://www.sciencedirect.com/science/article/pii/S0167404802005163}
-        % \url{https://dl.acm.org/doi/abs/10.1145/1529282.1529731}
-        
-        % % Regulations
-        % \url{https://journals.sagepub.com/doi/abs/10.1177/1043986219890194}
-        % \url{https://iopscience.iop.org/article/10.1088/1755-1315/428/1/012098/meta}
-        % \url{https://journals.sagepub.com/doi/full/10.1177/1043986219890202}
-        % \url{https://link.springer.com/article/10.1057/s41284-019-00195-5}
-        % \url{https://meridian.allenpress.com/jis/article-abstract/21/2/117/75564} % downward bias in the value of software
-        % \url{https://www.klm.com/travel/nl_en/Images/KLM-Jaarverslag-2019_tcm542-1063986.pdf} 2019 Jaarverslag klm straight line method
-    \end{rudiblockaddendum}
-    }
-\end{paralleltwoblocks}
+    \end{multicols}
+\end{rudiblockipolicyrecommendations}
+
+
+%\begin{paralleltwoblocks}{0.67}
+%    \begin{rudiblockipolicyrecommendations}
+%        \begin{multicols}{3}
+%            \ifx\homepath\overleafhome
+%            % Overleaf compilation.
+%            \input{chapters/4_discussion.tex}
+%        \else
+%            % Local compilation
+%            \input{latex/chapters/4_discussion.tex}
+%        \fi
+%        \end{multicols}
+%    \end{rudiblockipolicyrecommendations}
+%    %&
+%    %{
+%    %\begin{rudiblockaddendum}
+%    %	\small
+%    %	\References\par
+%    %    \Acknowledgments\par
+%    %    %\Funding
+%    %\end{rudiblockaddendum}
+%    %}
+%\end{paralleltwoblocks}
 
 % ======================================================================
 % force removal of empty page at the end
