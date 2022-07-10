@@ -237,6 +237,10 @@ def create_model_output_dirs(output_dir,model_name):
     #create_target_dir_if_not_exists(f"{output_dir}/", model_name)
     # TODO: assert directory: <repo root dir>/results/stage_1" exists
 
+def speed_up_mp3(dir,input_filename,output_filepath,factor):
+    input_filepath=f"{dir}/{input_filename}"
+    command=f'y | ffmpeg -i {input_filepath} -filter:a "atempo={factor}" -vn {output_filepath}'
+    subprocess.Popen(command, shell=True, stdout=subprocess.PIPE).stdout.read()
 
 def create_output(extension,output_dir,output_filename,soundbite_extension,soundbite_filename,tts_model):
 
@@ -252,7 +256,7 @@ def create_output(extension,output_dir,output_filename,soundbite_extension,sound
     #merge_without_converting(extension, output_dir,output_filename,soundbite_filename)
 
     # Load the presentation text from file.
-    text=load_txt_from_file("text.txt")
+    text=load_txt_from_file(f"{output_filename}.txt")
 
     # Separate the text into smaller sentences.
     sentences=split_into_sentences(text)
@@ -276,16 +280,26 @@ def create_output(extension,output_dir,output_filename,soundbite_extension,sound
 
     # TODO: Allow user to remove unused soundbites.
 
+    # Speed up audio output file
+
+
 # Specify the audio output dir.
 output_dir="output"
 soundbite_filename="soundbite"
-output_filename="Spoken_text"
+#output_filename="Spoken_text"
 soundbite_extension="wav"
 extension="mp3"
 
-sentences=["An algorithm is.","Part of my space."]
+text_filenames=["text","short_text"]
+
+#sentences=["An algorithm is.","Part of my space."]
+#tts_models=get_tts_models()
 #Best in 2:5
 best_so_far="tts_models/en/ljspeech/tacotron2-DDC_ph"
-tts_models=get_tts_models()
-for tts_model in [best_so_far]:
-    create_output(extension,output_dir,output_filename,soundbite_extension,soundbite_filename,tts_model)
+
+
+for text_filename in text_filenames:
+    for tts_model in [best_so_far]:
+        create_output(extension,output_dir,text_filename,soundbite_extension,soundbite_filename,tts_model)
+
+        speed_up_mp3(f"{output_dir}/{tts_model}",f"{text_filename}.{extension}",f"{output_dir}/1_4_{text_filename}.{extension}",1.4)

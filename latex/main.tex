@@ -1,41 +1,31 @@
-%%
-%% This is file `sample-sigconf.tex',
-%% generated with the docstrip utility.
-%%
-%% The original source files were:
-%%
-%% samples.dtx  (with options: `sigconf')
-%% 
-%% IMPORTANT NOTICE:
-%% 
-%% For the copyright see the source file.
-%% 
-%% Any modified versions of this file must be renamed
-%% with new filenames distinct from sample-sigconf.tex.
-%% 
-%% For distribution of the original source see the terms
-%% for copying and modification in the file samples.dtx.
-%% 
-%% This generated file may be distributed as long as the
-%% original source files, as listed above, are part of the
-%% same distribution. (The sources need not necessarily be
-%% in the same archive or directory.)
-%%
-%%
-%% Commands for TeXCount
-%TC:macro \cite [option:text,text]
-%TC:macro \citep [option:text,text]
-%TC:macro \citet [option:text,text]
-%TC:envir table 0 1
-%TC:envir table* 0 1
-%TC:envir tabular [ignore] word
-%TC:envir displaymath 0 word
-%TC:envir math 0 word
-%TC:envir comment 0 0
-%%
-%%
-%% The first command in your LaTeX source must be the \documentclass command.
-\documentclass[sigconf]{acmart}
+% ======================================================================
+% ======================================================================
+% ======================================================================
+%
+% UNOFFICIAL style for Posters at RU-DI
+% Radboud University, Donders Institute,
+% Nijmengen, Netherlands
+%
+%     Author: Riccardo Metere <r.metere@donders.ru.nl>
+%       Date: Jun 2018
+%  Copyright: 2018 (C) Riccardo Metere
+%    License: LaTeX Project Public License (LPPL) 
+%
+% Instructions:
+% - Look for `%FIXME` for finding items requiring author's attention
+% - Read the comments and if something is unclear please drop me a note
+%
+% TODO:
+% - Improve on the citation handling
+% - Improve on the figure reference handling
+% ======================================================================
+% ======================================================================
+% ======================================================================
+
+
+% ======================================================================
+% : initial configuration
+\documentclass[portrait,a0paper]{rudi-poster}  % FIXME (landscape|portrait)
 
 %%% Customisation
 % Determine whether it is local compilation or overleaf compilation
@@ -60,299 +50,268 @@
 
 % Include audio to turn into poster
 \usepackage{media9}
+
+% Allow to use cmdrule to draw horizontal line in table.
+\usepackage{booktabs}
+\usepackage{multirow}
+
+% Compact lists
+%\usepackage{enumitem}
 %%% End customisation
 
 
+% : additional packages
+\usepackage[T1]{fontenc}  % Standard package for selecting font encodings
+\usepackage[utf8x]{inputenc}  % Accept different input encodings
+\usepackage{mathtools}  % Mathematical tools to use with amsmath
+% \usepackage[english]{babel}  % Multilingual support for Plain TeX or LaTeX
+\usepackage{amsmath}  % AMS mathematical facilities for LaTeX
+\usepackage{amsfonts}  % TeX fonts from the American Mathematical Society
 
-%%
-%% \BibTeX command to typeset BibTeX logo in the docs
-\AtBeginDocument{%
-  \providecommand\BibTeX{{%
-    \normalfont B\kern-0.5em{\scshape i\kern-0.25em b}\kern-0.8em\TeX}}}
+\usepackage{wasysym}  % LaTeX support file to use the WASY2 fonts
+\usepackage{bbm}  % "Blackboard-style" cm fonts
+\usepackage{array}  % Extending the array and tabular environments
+\usepackage{verbatim}  % Reimplementation of and extensions to LaTeX verbatim
+\usepackage{float}  % Improved interface for floating objects
+\usepackage[inline]{enumitem}  % Control layout of itemize, enumerate, description
+\usepackage{qrcode}  % Generate QR codes in LaTeX
+\usepackage{lipsum}
 
-%% Rights management information.  This information is sent to you
-%% when you complete the rights form.  These commands have SAMPLE
-%% values in them; it is your responsibility as an author to replace
-%% the commands and values with those provided to you when you
-%% complete the rights form.
-%\setcopyright{acmcopyright}
-%\copyrightyear{2022}
-%\acmYear{2022}
-%\acmDOI{10.5281/zenodo.6509080}
+%\usepackage{enumitem}
+\usepackage{cleveref}
 
-%% These commands are for a PROCEEDINGS abstract or paper.
-%\acmConference[Conference acronym 'ICONS]{International Conference on Neuromorphic Systems}{July 27--29,
-%  2022}{Knoxville, Tennessee}
-%\acmPrice{15.00}
-%\acmISBN{978-1-4503-XXXX-X/18/06}
-
-% Try 1
-%\newcommand\authornotemark[1][\relax]{%
-%\ifx#1\relax\relax\relax
-% \g@addto@macro\addresses{\@authornotemark}%
-%\else
-%  \g@addto@macro\addresses{\@@authornotemark{#1}}%
-%\fi}
-% Try 2
-%\def\@authornotemark{\g@addto@macro\@currentauthors{\footnotemark\relax}}
-%\@@authornotemark
-
-% Try 3
-%\def\@authornotemark{\g@addto@macro\@currentauthors{\footnotemark\relax}}
-%%\@@authornotemark
-
-% Try 4
-%\def\@authornotes{}
-%\def\authornote#1{%
-%  \if@ACM@anonymous\else
-%    \g@addto@macro\addresses{\@authornotemark}
-%    \g@addto@macro\@authornotes{%
-%      \stepcounter{footnote}\footnotetext{#1}}%
-%  \fi}
-
-
-%%
-%% Submission ID.
-%% Use this when submitting an article to a sponsored event. You'll
-%% receive a unique submission ID from the organizers
-%% of the event, and this ID should be used as the parameter to this command.
-%%\acmSubmissionID{123-A56-BU3}
-
-%%
-%% The majority of ACM publications use numbered citations and
-%% references.  The command \citestyle{authoryear} switches to the
-%% "author year" style.
-%%
-%% If you are preparing content for an event
-%% sponsored by ACM SIGGRAPH, you must use the "author year" style of
-%% citations and references.
-%% Uncommenting
-%% the next command will enable that style.
-%%\citestyle{acmauthoryear}
-
-%%
-%% end of the preamble, start of the body of the document source.
-\begin{document}
-
-%%
-%% The "title" command has an optional parameter,
-%% allowing the author to define a "short title" to be used in page headers.
-\title{Leveraging brain-adaptation principles to increase radiation resistance of neuromorphic space hardware
+%\usepackage{amssymb}  % Additional symbols from American Mathematical Society
+% ======================================================================
+% : set-up document information  % FIXME
+\title{Leveraging brain-adaptation principles to increase radiation\\
+resistance of neuromorphic space hardware
 \includemedia[
-  addresource=audio/output/spoken_text.mp3,
+  addresource=audio/output/1_4_short_text.mp3,
   transparent,
   flashvars={
-    source=audio/output/spoken_text.mp3
+    source=audio/output/1_4_short_text.mp3
    &autoPlay=true
   },
-]{\includegraphics[height=3em]{audio/speaker.png}}{APlayer.swf}
-}
-
-%%
-%% The "author" command and its associated commands are used to define
-%% the authors and their affiliations.
-%% Of note is the shared affiliation of the first two authors, and the
-%% "authornote" and "authornotemark" commands
-%% used to denote shared contribution to the research.
-%\author{Akke Toeter}
-\author{A.H.H. Toeter, J.H.P. Kwisthout, D.M. Stam, D.M. Menicucci}
-%\authornote{All authors contributed equally to this research.}
-%\orcid{0000-0002-9577-920X}
-%
-%\affiliation{%
-%  \institution{Delft University of Technology, Radboud University}
-%  \country{The Netherlands}
-%}
-%\email{a.h.h.toeter@tudelft.nl}
-%
+]{\includegraphics[height=0.8em]{audio/speaker.png}}{APlayer.swf}}
+% \title{RU-DI Poster Template RU-DI Poster Template RU-DI Poster Template RU-DI Poster Template RU-DI Poster Template RU-DI Poster Template}  % STRESS-TEST
+%\author{Akke Toeter, J.H.P. Kwisthout, D.M. Stam, A. Menicucci}
+\author{Akke Toeter}
 %\author{J.H.P. Kwisthout}
-%\orcid{0000-0003-4383-7786}
-%%\authornotemark[1]
-%\affiliation{%
-%  \institution{Radboud University}
-%  \country{The Netherlands}
-%}
-%\email{johan.kwisthout@donders.ru.nl}
-%
 %\author{D.M. Stam}
-%\orcid{0000-0003-3697-2971}
-%\affiliation{%
-%  \institution{Delft University of Technology}
-%  \country{The Netherlands}
-%}
-%\email{D.M.Stam@tudelft.nl}
-%
 %\author{A. Menicucci}
-%\orcid{0000-0002-7064-6275}
-%\affiliation{%
-%  \institution{Delft University of Technology}
-%  \country{The Netherlands}
-%}
-%\email{A.Menicucci@tudelft.nl}
+\date{2022-07-28}
 
-%%
-%% By default, the full list of authors will be used in the page
-%% headers. Often, this list is too long, and will overlap
-%% other information printed in the page headers. This command allows
-%% the author to define a more concise list
-%% of authors' names for this purpose.
-\renewcommand{\shortauthors}{Toeter et al.}
 
-%%
-%% The abstract is a short summary of the work to be presented in the
+
+\newcommand{\Contact}{e-mail: \mailto{akke.toeter@radboud.student.nl}}
+\newcommand{\Authors}{
+	\hspace{-1ex}
+    \begin{itemize*}[label=]
+        %\item Custom text
+    	\item \theauthor\textsuperscript{1,2} %,
+        \item J.H.P. Kwisthout\textsuperscript{1} %,
+        \item D.M.Stam\textsuperscript{2} %,
+        \item A. Menicucci\textsuperscript{2} %,
+        %\item \theauthor\textsuperscript{1} %,
+        %\item \theauthor\textsuperscript{2} %,
+        %\item \theauthor\textsuperscript{2} %,
+% 	    \item \theauthor\textsuperscript{1}  % STRESS-TEST
+% 	    \item \theauthor\textsuperscript{1}  % STRESS-TEST
+% 	    \item \theauthor\textsuperscript{1}  % STRESS-TEST
+% 	    \item \theauthor\textsuperscript{1}  % STRESS-TEST
+    \end{itemize*}}
+\newcommand{\Affiliations}{
+%   \hspace{0.1ex}
+  \begin{enumerate*}[label=\textbf{\arabic*} ]
+    \item \RUDI, Nijmegen, Netherlands
+    \item \DELFT, Delft, Netherlands
+%     \item \RUDI  % STRESS-TEST
+%     \item \RUDI  % STRESS-TEST
+%     \item \RUDI  % STRESS-TEST
+%     \item \RUDI  % STRESS-TEST
+  \end{enumerate*}}
+  
+\newcommand{\ExtraLogos}{%
+	\qrcode[height=\rudisizeextralogo]{https://github.com/a-t-0/networkx-to-lava-nc/}}
+
+\newcommand{\EventName}{ICONS}
+\newcommand{\EventLocation}{Knoxville, Tennessee (USA)>}
+\newcommand{\PresentedAt}{Presented at the \EventName{} in \EventLocation{} on \theeventdate}
+
+\newcommand{\References}{
+    \textbf{References}%\par
+    %\begin{enumerate*}[label={[}\textbf{\arabic*}{]}]
+    \begin{enumerate}
+    \itemsep-1em 
+\item  M. Ben-Menachem and I. Gavious, 2007, Accounting Software Assets:A Valuation Model for Software,  Ben-Gurion University.\\ % Business model
+\item Royal Dutch Airlines KLM Annual Report 2019.\\ % anual report
+\item S. Shahrivar et al., 2018, A business model for commercial open source software: A systematic literature review, Tarbiat Modares University.\\ % COSS 
+\item G. Schryen and R. Kadura, 2009, Open Source vs. Closed Source Software: Towards Measuring Security. % Security can add safety
+\end{enumerate}}
+\newcommand{\Acknowledgments}{
+	\textbf{Acknowledgments}:
+    \begin{itemize*}[label=]
+    	\item Dr. W.F.G. Haselager for suggesting open source software as topic for a research brief.
+    \end{itemize*}}
+% \newcommand{\Funding}{
+% 	\textbf{Funded by}:
+%     \begin{itemize*}[label=]
+%     	\item T.b.d.
+%     \end{itemize*}}
+\newcommand{\Keywords}{
+	Magnetic Resonance Imaging,
+    MRI,
+    Nuclear Magnetic Resonance,
+    NMR}
+
+% ======================================================================
+% fill in PDF metadata
+\hypersetup{% hyperref setup for PDFs
+  pdftitle={\theauthor{}~-~\thetitle{}~-~(\EventName{},~\theyear{})},
+  pdfcreationdate={\thedate{}},
+  pdfauthor={\theauthor{}},
+  pdfkeywords={\Keywords{}},
+  pdflang={\languagename},
+}%
+
+% ======================================================================
+% :: adjust block sizes  % FIXME
+% : block sizes
+% \setlength{\rudisizeblockheader}{0.077\paperheight}
+% \setlength{\rudisizeblockintro}{0.087\paperheight}
+% \setlength{\rudisizeblockmethods}{0.099\paperheight}
+% \setlength{\rudisizeblockdiscussion}{0.130\paperheight}
+% % set length to vertical fill space of results block
+% \setlength{\rudisizeblockresults}{\paperheight - \rudisizeblockheader - \rudisizeblockintro - \rudisizeblockmethods - \rudisizeblockdiscussion - 0\rudisizeblocktitleheight - 4\parskip - 2\rudisizemargin - 8\rudisizevpadding - 10\rudisizeborder + 6\uum - 0\uum}
+% % set length of Addendum block equal to Discussion block
+% \setlength{\rudisizeblockaddendum}{\rudisizeblockdiscussion}
+
+
+% ======================================================================
+%% Document
+\begin{document}
+
+% Compact lists
+\renewcommand{\@listI}{%
+\leftmargin=25pt
+\rightmargin=0pt
+\labelsep=0pt
+\labelwidth=20pt
+\itemindent=0pt
+\listparindent=0pt
+\topsep=0pt plus 2pt minus 4pt
+\partopsep=0pt plus 1pt minus 1pt
+\parsep=0pt plus 1pt
+\itemsep=\parsep}
+
+
+% ======================================================================
+\rudiposterheader{\thetitle}{\Authors}{\Affiliations}
+\rudipostersidenote{\PresentedAt}
+\rudiposterfooter{\Contact}{\ExtraLogos}
+
+% ======================================================================
+\vspace{-2.4em}
+\begin{rudiblockintro}
+    \begin{multicols}{3}
+        %% The abstract is a short summary of the work to be presented in the
 %% article.
-\ifx\homepath\overleafhome
-  % Overleaf compilation.
-  \input{chapters/0_abstract}
-\else
-  % Local compilation
-  \input{latex/chapters/0_abstract}
-\fi
-
-
-%%
-%% The code below is generated by the tool at http://dl.acm.org/ccs.cfm.
-%% Please copy and paste the code instead of the example below.
-%%
-\begin{CCSXML}
-  <ccs2012>
-    <concept>
-        <concept_id>10010583.10010750.10010762.10010764</concept_id>
-        <concept_desc>Hardware~Circuit hardening</concept_desc>
-        <concept_significance>500</concept_significance>
-        </concept>
-    <concept>
-        <concept_id>10010583.10010750.10010762.10010768</concept_id>
-        <concept_desc>Hardware~Transient errors and upsets</concept_desc>
-        <concept_significance>300</concept_significance>
-        </concept>
-  </ccs2012>
-\end{CCSXML}
-
-\ccsdesc[500]{Hardware~Circuit hardening}
-\ccsdesc[300]{Hardware~Transient errors and upsets}
-
-
-%%
-%% Keywords. The author(s) should pick words that accurately describe
-%% the work being presented. Separate the keywords with commas.
-\keywords{neuromorphic engineering, spiking neural networks, brain adaptation, radiation hardening}
-
-%% A "teaser" image appears between the author and affiliation
-%% information and the body of the document, and typically spans the
-%% page.
-%\begin{teaserfigure}
-%  \includegraphics[width=\textwidth]{sampleteaser}
-%  \caption{Seattle Mariners at Spring Training, 2010.}
-%  \Description{Enjoying the baseball game from the third-base
-%  seats. Ichiro Suzuki preparing to bat.}
-%  \label{fig:teaser}
-%\end{teaserfigure}
-
-%%
-%% This command processes the author and affiliation and title
-%% information and builds the first part of the formatted document.
-\maketitle
-
-% Abstract
-% Introduction
-% Methodology
-% Results
-% Discussion
-% Conclusion
-% Recommendations.
-\ifx\homepath\overleafhome
-% Overleaf compilation.
-
-% Include chapters.
-%\input{chapters/0_abstract}
-%\input{chapters/1_intro}
-%\input{chapters/2_brain_adaptation.tex}
-\input{chapters/2_methodology.tex}
-\input{chapters/3_results.tex}
-\input{chapters/4_discussion.tex}
-\input{chapters/5_conclusion.tex}
-\input{chapters/6_recommendation.tex}
-%\input{chapters/7_acknowledgements.tex}
-\else
-% Local compilation
-
-% Include chapters.
-%\input{latex/chapters/0_abstract}
-\input{latex/chapters/1_intro}
-\input{latex/chapters/2_brain_adaptation.tex}
-\input{latex/chapters/2_methodology.tex}
-\input{latex/chapters/3_results.tex}
-\input{latex/chapters/4_discussion.tex}
-\input{latex/chapters/5_conclusion.tex}
-\input{latex/chapters/6_recommendation.tex}
-%\input{latex/chapters/7_acknowledgments.tex}
-\fi
+        
+        \ifx\homepath\overleafhome
+            % Overleaf compilation.
+            \input{chapters/0_abstract}
+        \else
+            % Local compilation
+            \input{latex/chapters/0_abstract}
+        \fi
+    \end{multicols}
+\end{rudiblockintro}
 
 
 
-%%
-%% The acknowledgments section is defined using the "acks" environment
-%% (and NOT an unnumbered section). This ensures the proper
-%% identification of the section in the article metadata, and the
-%% consistent spelling of the heading.
-\ifx\homepath\overleafhome
-% Overleaf compilation.
+% ======================================================================
 
-% Include chapters.
-%\input{chapters/0_abstract}
-\input{chapters/7_acknowledgments.tex}
-\else
-% Local compilation
+%\begin{rudiblockmethods}
+%\end{rudiblockmethods}
 
-% Include chapters.
-%\input{latex/chapters/0_abstract}
-\input{latex/chapters/7_acknowledgments.tex}
-\fi
+% ======================================================================
+
+\begin{rudiblockiintroduction}
+    \begin{multicols}{3}
+        \ifx\homepath\overleafhome
+            % Overleaf compilation.
+            \input{chapters/2_methodology.tex}
+        \else
+            % Local compilation
+            \input{latex/chapters/2_methodology.tex}
+        \fi
+    \end{multicols}
+\end{rudiblockiintroduction}
+
+%%\begin{rudiblockimethodsresultsbody}
+%%    \begin{multicols}{3}
+%%    \end{rudisubblock}
+%%\end{rudiblockimethodsresultsbody}
+
+% ======================================================================
+
+\begin{rudiblockconclusion}
+    \begin{multicols}{3}
+        \ifx\homepath\overleafhome
+            % Overleaf compilation.
+            \input{chapters/3_results.tex}
+            \input{chapters/4_discussion.tex}
+        \else
+            % Local compilation
+            \input{latex/chapters/3_results.tex}
+            \input{latex/chapters/4_discussion.tex}
+        \fi
+    \end{multicols}
+\end{rudiblockconclusion}
+
+% ======================================================================
+
+\begin{rudiblockipolicyrecommendations}
+    \begin{multicols}{3}
+        \ifx\homepath\overleafhome
+            % Overleaf compilation.
+            \input{chapters/5_conclusion.tex}
+            \input{chapters/6_recommendation.tex}
+        \else
+            % Local compilation
+            \input{latex/chapters/5_conclusion.tex}
+            \input{latex/chapters/6_recommendation.tex}
+        \fi
+    \end{multicols}
+\end{rudiblockipolicyrecommendations}
 
 
-%%
-%% The next two lines define the bibliography style to be used, and
-%% the bibliography file.
-\bibliographystyle{ACM-Reference-Format}
-%\bibliography{sample-base}
-\bibliography{zotero}
+%\begin{paralleltwoblocks}{0.67}
+%    \begin{rudiblockipolicyrecommendations}
+%        \begin{multicols}{3}
+%            \ifx\homepath\overleafhome
+%            % Overleaf compilation.
+%            \input{chapters/4_discussion.tex}
+%        \else
+%            % Local compilation
+%            \input{latex/chapters/4_discussion.tex}
+%        \fi
+%        \end{multicols}
+%    \end{rudiblockipolicyrecommendations}
+%    %&
+%    %{
+%    %\begin{rudiblockaddendum}
+%    %	\small
+%    %	\References\par
+%    %    \Acknowledgments\par
+%    %    %\Funding
+%    %\end{rudiblockaddendum}
+%    %}
+%\end{paralleltwoblocks}
 
-%%
-%% If your work has an appendix, this is the place to put it.
-\appendix
-
-%\section{Research Methods}
-
-%\subsection{Part One}
-
-%Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
-%malesuada, quam in pulvinar varius, metus nunc fermentum urna, id
-%sollicitudin purus odio sit amet enim. Aliquam ullamcorper eu ipsum
-%vel mollis. Curabitur quis dictum nisl. Phasellus vel semper risus, et
-%lacinia dolor. Integer ultricies commodo sem nec semper.
-%
-%\subsection{Part Two}
-%
-%Etiam commodo feugiat nisl pulvinar pellentesque. Etiam auctor sodales
-%ligula, non varius nibh pulvinar semper. Suspendisse nec lectus non
-%ipsum convallis congue hendrerit vitae sapien. Donec at laoreet
-%eros. Vivamus non purus placerat, scelerisque diam eu, cursus
-%ante. Etiam aliquam tortor auctor efficitur mattis.
-%
-%\section{Online Resources}
-%
-%Nam id fermentum dui. Suspendisse sagittis tortor a nulla mollis, in
-%pulvinar ex pretium. Sed interdum orci quis metus euismod, et sagittis
-%enim maximus. Vestibulum gravida massa ut felis suscipit
-%congue. Quisque mattis elit a risus ultrices commodo venenatis eget
-%dui. Etiam sagittis eleifend elementum.
-%
-%Nam interdum magna at lectus dignissim, ac dignissim lorem
-%rhoncus. Maecenas eu arcu ac neque placerat aliquam. Nunc pulvinar
-%massa et mattis lacinia.
-
+% ======================================================================
+% force removal of empty page at the end
+% (this will not work inside `\AtEndDocument`)
+\clearpage
 \end{document}
-\endinput
-%%
-%% End of file `sample-sigconf.tex'.
+
